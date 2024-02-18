@@ -20,7 +20,20 @@ return require('packer').startup(function(use)
 		  vim. cmd( 'colorscheme rose-pine')
 	  end
   })
-
+  use({
+      'ellisonleao/gruvbox.nvim',
+      as =  'gruvbox',
+      config = function()
+          vim. cmd( 'colorscheme gruvbox')
+      end
+  })
+  use ({
+      'catppuccin/nvim',
+      as = 'catppuccin',
+      config = function()
+          vim. cmd('colorscheme catppuccin')
+      end
+  })
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
@@ -47,9 +60,6 @@ return require('packer').startup(function(use)
 		  {'hrsh7th/cmp-nvim-lsp'},
 		  {'L3MON4D3/LuaSnip'},
 	  }
-  }
-  use {
-	  "williamboman/mason.nvim"
   }
   use {
 	  "williamboman/mason.nvim",
