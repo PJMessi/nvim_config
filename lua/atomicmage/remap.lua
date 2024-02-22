@@ -21,10 +21,10 @@ end)
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
@@ -48,13 +48,14 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
---  atomicmage's keymaps
+--  atomicmage's keymaps --
+
+--  delete whole word before the cursor
+vim.keymap.set("c", "<M-BS>", "<C-w>", { noremap = true })
 vim.keymap.set("i", "<M-BS>", "<C-w>", { noremap = true })
 
--- splitpane navigation
+-- nagivate between split panes
 vim.keymap.set("n", "<leader>wk", '<C-w>k')
 vim.keymap.set("n", "<leader>wj", '<C-w>k')
 vim.keymap.set("n", "<leader>wl", '<C-w>l')
 vim.keymap.set("n", "<leader>wh", '<C-w>h')
-
-
