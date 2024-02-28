@@ -35,6 +35,20 @@ require('mason-lspconfig').setup({
             local lua_opts = lsp_zero.nvim_lua_ls()
             require('lspconfig').lua_ls.setup(lua_opts)
         end,
+        -- tsserver = function()
+        --     require('lspconfig').lua_ls.setup({
+        --         on_attach = function(client, bufnr)
+        --             client.server_capabilities.documentFormattingProvider = false
+        --         end
+        --     })
+        -- end,
+        -- eslint = function()
+        --     require('lspconfig').lua_ls.setup({
+        --         on_attach = function(client, bufnr)
+        --             client.server_capabilities.documentFormattingProvider = true
+        --         end
+        --     })
+        -- end
     }
 })
 

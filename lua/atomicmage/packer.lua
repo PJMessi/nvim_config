@@ -59,4 +59,14 @@ return require('packer').startup(function(use)
         "williamboman/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
     }
+
+    -- atomicmage's plugin --
+    use { '/Users/prajwalshrestha/Desktop/personal-projects/nvim/hanger' }
+
+    use { 'nvim-telescope/telescope-ui-select.nvim' }
+
+    use {
+        "nvim-telescope/telescope-file-browser.nvim",
+        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    }
 end)
